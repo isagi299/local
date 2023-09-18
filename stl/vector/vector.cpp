@@ -38,6 +38,82 @@ int main()
     // another way of output the whole vector
     cout<<"vector element : ";
     for(auto u:a) cout<<u<<" ";
+    cout<<endl;
 
+    // to check if the vector is empty or not -- v_name.empty(); return 1 if empty else 0
+    cout<<"check vector empty or not : ";
+    cout<<a.empty()<<endl;
+
+    // to resize a vector -- v_name.resize(size)
+    cout<<"before resize : ";
+    cout<<a.size()<<endl;
+    a.resize(8);
+    cout<<"after resize : ";
+    cout<<a.size()<<endl;
+
+
+    // we declare size and value of vector -- vector<int>v_name(size);
+    // vector<data_type> v_name(size,value) --> it will create a vector of size with all the element of value
+    // vector<data_type> v_name={1,3,4,5,6}
+
+    // we can copy vector -- v1_name=v2_name;
+    vector<int> b;
+    b=a;
+    cout<<"b element : ";
+    for(auto u:b) cout<<u<<" ";
+    cout<<endl;
+
+    // sorting -- sort(v.begin(),v.end());
+    // v.begin() is the address of first element of a vector
+    // v.end() is the address of last element + 1 of a vector
+
+    sort(b.begin(),b.end());
+    cout<<"b element : ";
+    for(auto u:b) cout<<u<<" ";
+    cout<<endl;
+
+    // sort a proper range -- sort(v.begin()+index_intial,v.begin_last+index+1)
+    // sorting in decreasing order -- sort(v.rbegin(),v.rend())
+    // sorting in decreasing order -- sort(v.begin(),v.end(),greater<int>())
+    // sort a proper range in decreasing order -- sort(v.begin()+index_intial,v.begin_last+index+1,greater<int>())
+    sort(b.rbegin(),b.rend());
+    cout<<"b element decreasing order : ";
+    for(auto u:b) cout<<u<<" ";
+    cout<<endl;
+    
+    // vector element erase -- erase(v.begin+index)
+    cout<<"second index : ";
+    cout<<b[1];
+    cout<<endl;
+    b.erase(b.begin()+1);
+    cout<<"after erase second index : ";
+    cout<<b[1];
+    cout<<endl;
+
+    // know the first element -- v.front()
+    // know the last element -- v.back()
+    // delete the last element -- v.pop_back()
+
+    // unique value
+    cout<<"unique element : ";
+    sort(b.begin(),b.end());
+    int u=unique(b.begin(),b.end())-b.begin();
+    for(int i=0;i<u;i++) cout<<b[i]<<" ";
+    cout<<endl;
+
+    // max element and min element -- *max_element(v.begin(),v.end()) *min_element(v.begin(),v.end())
+    int max1=*max_element(b.begin(),b.end());
+    int min1=*min_element(b.begin(),b.end());
+    cout<<"max element = "<<max1<<"\n"<<"min element = "<<min1<<endl;
+
+    // itarator -- vector<data_type>::iterator it_name;
+    vector<int>::iterator it;
+    for(it=b.begin();it!=b.end();it++) cout<<*it<<" ";
+    cout<<endl;
+
+    // reverse -- reverse(v.begin(),v.end())
+    // reverse -- reverse(v.rbegin(),v.rend())
+    
+    
 
 }

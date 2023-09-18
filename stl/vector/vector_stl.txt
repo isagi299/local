@@ -23,7 +23,7 @@ reverse(v1.begin(),v1.end());
 reverse(v1.begin()+n,v1.begin()+m+1);
 to access the last element of a vector -- v_name.back()
 to delete the last element of a vector -- v_name.pop_back() O(1)
-to access the first element of a vector -- *v_name.begin()
+to access the first element of a vector -- *v_name.begin() / v_name.front()
 to delete the any element of a vector -- v_name.erase(v_name.begin()+index) O(n)
 to delete vector element one by one -- reverse() then pop_back
 int unique_size = unique(v.begin(),v.end())-v.begin();
