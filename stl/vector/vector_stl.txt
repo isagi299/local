@@ -1,0 +1,35 @@
+declare -- vector<data_type> vector_name;
+input vector -- vector_name.push_back( data )
+to know vector size -- v_name.size()
+clear the full vector -- v.clear()
+check vector empty or not -- v.empty() if empty return 1 else 0
+resize a vector -- v.resize( data )
+determine the size when declare -- vector<data_type> v( data ); initially all value are 0.
+copy a whole vetor to an another vector v1=v2;
+we can have any type of vector
+vector.begin() -- access the first element (pointer)
+vector.end() -- know the end point. last element + 1(pointer)
+access using iterator
+vector<int>::iterator it;
+for each loop for(auto ver_name : vector_name)
+array sorting -- sort(a,a+n) where array size is n if you want full array sorted.
+array sorting any -- sort(a+n,a+m+1) where n = initial index and m = end index
+vector sorting full --  sort(v_name.begin(),v_name.end());
+vector sorting any -- sort(v_name.begin()+n,v.begin()+m+1) where n = initial index and m = end index
+sort(v1.begin(),v1.end(),greater<int>());
+sort(v1.rbegin(),v1.rend());
+reverse function
+reverse(v1.begin(),v1.end());
+reverse(v1.begin()+n,v1.begin()+m+1);
+to access the last element of a vector -- v_name.back()
+to delete the last element of a vector -- v_name.pop_back() O(1)
+to access the first element of a vector -- *v_name.begin()
+to delete the any element of a vector -- v_name.erase(v_name.begin()+index) O(n)
+to delete vector element one by one -- reverse() then pop_back
+int unique_size = unique(v.begin(),v.end())-v.begin();
+vector<int>:: iterator it=max_element(v.begin(),v.end());
+int n = max_element(v.begin(),v.end()) - v.begin(); // idex
+vector<int>:: iterator it=min_element(v.begin(),v.end());
+int n = min_element(v.begin(),v.end()) - v.begin(); // idex
+int n=*max_element(v.begin(),v.end());
+int n1=*min_element(v.begin(),v.end());
